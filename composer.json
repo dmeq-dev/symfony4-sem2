@@ -17,7 +17,13 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.20"
+        "symfony/debug-bundle": "^4.4",
+        "symfony/maker-bundle": "^1.20",
+        "symfony/monolog-bundle": "^3.0",
+        "symfony/stopwatch": "^4.4",
+        "symfony/twig-bundle": "^4.4",
+        "symfony/var-dumper": "^4.4",
+        "symfony/web-profiler-bundle": "^4.4"
     },
     "config": {
         "preferred-install": {
