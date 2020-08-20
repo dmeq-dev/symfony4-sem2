@@ -57,7 +57,7 @@ private $references= [];
        */
       protected function createMany(int $count, string $groupName, callable $factory)
       {
-            for($i = 8;$i<$count;$i++)
+            for($i = 0;$i<$count;$i++)
             {   //on éxécute $factory qui doit retournée l'entitée générée.
                 $entity = $factory();
 

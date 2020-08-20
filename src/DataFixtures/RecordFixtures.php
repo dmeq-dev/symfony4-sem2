@@ -19,6 +19,7 @@ class RecordFixtures extends BaseFixture implements DependentFixtureInterface
         ->setDescription($this->faker->optional()->realText())
         ->setReleasedAt($this->faker->dateTimeBetween('-2 years'))
         ->setArtist($this->getRandomReference('artist'))
+        ->setLabel($this->faker->boolean(75) ? $this->getRandomReference('label') : null)
         ;
      });
 
@@ -26,7 +27,8 @@ class RecordFixtures extends BaseFixture implements DependentFixtureInterface
     public function getDependencies()
     {
         return[
-            ArtistFixtures::class
+            ArtistFixtures::class,
+            LabelFixtures::class,
         ] ;
 
     }

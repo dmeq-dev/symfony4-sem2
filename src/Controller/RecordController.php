@@ -3,7 +3,9 @@
 namespace App\Controller;
 use App\Entity\Record;
 use App\Entity\Artist;
+use App\Entity\Label;
 use App\Repository\ArtistRepository;
+use App\Repository\LabelRepository;
 use App\Repository\RecordRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -57,4 +59,19 @@ class RecordController extends AbstractController
        ]);
 
     }
+
+/**
+ * page lablel
+ *@Route("/label/{id}", name="label_page")
+ * 
+ */
+    public function Label_Page(Label  $label)
+    {
+        return $this->render('label/Label_Page.html.twig',[
+            'label'=> $label
+        ]);
+    }
+
+
+
 }
