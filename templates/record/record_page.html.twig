@@ -1,0 +1,42 @@
+{% extends "_template.html.twig" %}
+
+{% block title %}
+Records
+{% endblock %}
+
+{% block content %}
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-two-fifth">
+            <figure class="image is-1by1">
+                <img src="https://loremflickr.com/1024/1024/album,music/all?lock=ID">
+            </figure>
+        </div>
+
+        <div class="column">
+            <h1 class="title has-text-primary">
+                {{record.title}}
+            </h1>
+            <h2 class="subtitle">
+                Artiste:
+                <a href="#">
+                    {{record.artist.name}}
+                </a>
+            </h2>
+
+            <p class="content">
+                {{record.description}}
+            </p>
+
+            <hr>
+            <h6 class="is-size-7">
+                <span class="icon has-text-info"><i class="fas fa-info-circle"></i></span>
+                <span>{{record.releasedAt|date('d/m/y')}}</span>
+            </h6>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

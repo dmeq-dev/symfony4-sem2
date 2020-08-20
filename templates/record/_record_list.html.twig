@@ -1,0 +1,29 @@
+{% for record in record_list %}
+
+<div class="box">
+    <article class="media">
+        <div class="media-left">
+            <figure class="image is-128x128">
+                <img src="https://loremflickr.com/256/256/album,music/all?lock=ID" alt="Image">
+            </figure>
+        </div>
+        <div class="media-content">
+            <div class="content">
+                <p>
+                    <a href="{{path('record_page',{id:record.id}) }}" class="has-text-primary">
+                        <strong>{{record.title}}</strong>
+                    </a>
+                    <small>{{record.releasedAt|date('d/m/y')}}</small>
+                    <br>
+                    <small>
+                        <strong>:</strong>
+                        <a href="{{ path ('artist_page',{id: record.artist.id})}}">{{ record.artist.name }}</a>
+                    </small><br>
+                    {{ record.description|slice(0,50) }}
+                </p>
+            </div>
+        </div>
+    </article>
+</div>
+
+{% endfor %}
