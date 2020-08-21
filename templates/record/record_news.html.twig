@@ -1,0 +1,19 @@
+{% extends "_template.html.twig" %}
+
+
+{% block title %}
+
+    Nouveautés
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div  class="section">
+        <h1 class"title">Nouveautés : {{ record_news|length }} </h1>
+
+    {% include 'record/_record_list.html.twig' with {record_list: record_news} %}
+
+    </div>
+{% endblock %}

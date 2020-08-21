@@ -1,0 +1,15 @@
+{% extends "_template.html.twig" %}
+
+{% block title %}
+    Artiste: {{ artist.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Artiste: {{ artist.name }}
+        <p>{{ artist.description }}</p>
+
+    <h3 class="subtitle">Discographie: {{ artist.records|length}}</h3>
+    {% include "record/_record_list.html.twig" with {record_list: artist.records} %}
+    </div>
+{% endblock %}
