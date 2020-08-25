@@ -59,7 +59,7 @@ private $references= [];
       {
             for($i = 0;$i<$count;$i++)
             {   //on éxécute $factory qui doit retournée l'entitée générée.
-                $entity = $factory();
+                $entity = $factory($i);
 
                 if($entity === null)
                 {
