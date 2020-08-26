@@ -41,13 +41,13 @@
                        <div class="buttons">
                            {% if app.user %}
                            
-                           <a class="button is-primary is-small" href=" {{ path('app_login') }} ">
+                           <a class="button is-primary is-small" href=" {{ path('app_logout') }} ">
                             <strong>{{app.user.pseudo}}</strong>
                         </a>
                             {% else %}
                             
-                           <a class="button is-light is-small" href="{{path('app_logout')}}">
-                            déconnexion
+                           <a class="button is-light is-small" href="{{path('app_login')}}">
+                            connexion
                         </a>
 
                             {% endif %}
