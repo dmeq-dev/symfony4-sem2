@@ -40,19 +40,28 @@
                    <div class="navbar-item">
                        <div class="buttons">
                            {% if app.user %}
-                           
-                           <a class="button is-primary is-small" href=" {{ path('app_logout') }} ">
+                          
+                        
+                           <a class="button is-primary is-small" href="#">
                             <strong>{{app.user.pseudo}}</strong>
                         </a>
+                        <a class="button is-light is-small" href="{{path('app_logout')}}">
+
+                            deconnexion
+                        </a>
                             {% else %}
-                            
+                            <a class="button is-primary is-small" href=" {{ path('app_register') }} ">
+                                <strong>inscription</strong>
+                            </a>
                            <a class="button is-light is-small" href="{{path('app_login')}}">
+
                             connexion
                         </a>
 
                             {% endif %}
                               
                              {% if is_granted("ROLE_EDITOR") %}
+
                              <a class="button is-primary is-small" href=" {{ path('admin_dashboard') }}">
                                 <strong>Back-office</strong>
                             </a>
