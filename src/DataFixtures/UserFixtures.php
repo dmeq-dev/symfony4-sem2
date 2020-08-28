@@ -30,6 +30,8 @@ class UserFixtures extends BaseFixture
                 ->setRoles(['ROLE_ADMIN'])
                 ->setPassword($password)
                 ->setPseudo('admin_' . $num)
+                ->confirmAcount()
+                ->renewToken()
             ;
         });
 
@@ -42,6 +44,8 @@ class UserFixtures extends BaseFixture
                 ->setEmail('user' . $num . '@kritik.fr')
                 ->setPassword($password)
                 ->setPseudo($this->faker->unique()->userName)
+                ->confirmAcount()
+                ->renewToken()
             ;
         });
     }

@@ -1,0 +1,11 @@
+<h1>Bienvenue,{{user.pseudo}}</h1>
+
+<p>
+    Votre compte sur Kritik a bien été créé, merci de bien vouloir confirmer
+    votre inscription en cliquant syr le lien suivant:
+    <br>
+    <a href=" {{ url('account_confirmation',{ id:user.id, token: user.token }) }} ">
+        confirmer mon compte
+
+    </a>
+</p>
